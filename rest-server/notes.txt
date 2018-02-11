@@ -1,0 +1,9 @@
+How to test:
+
+1. Run the application.
+2. Execute 'curl xxclientid:xx1981@localhost:8080/oauth/token -d grant_type=password -d username=admin -d password=abc123'
+3. Get the access_token.
+4. Execute curl http://localhost:8080/api/v1/<resource> -H "Authorization: Bearer <access_token here>"
+
+e.g.
+curl http://localhost:8080/api/v1/users -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0TmFtZSI6IlNtaXRoIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJhdXRob3JpdGllcyI6WyJBRE1JTl9BQ0NPVU5UIiwiVVNFUl9BQ0NPVU5UIl0sImNsaWVudF9pZCI6Inh4Y2xpZW50aWQiLCJmaXJzdE5hbWUiOiJKb2huIiwiYXVkIjpbInh4cmVzb3VyY2VpZCJdLCJwYXNzd29yZCI6IiQyYSQxMCRtSUYwWjZSL0RDRFpCMVlHN1plSTAudnVmSHZXblhLR1duWkNnWllWLjZXS3Nsd3FuenpKbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJpZCI6MiwiZXhwIjoxNTE4MzkyODc2LCJqdGkiOiIwNTMwYjY3Zi02ZDgyLTQ0ZjUtODExZi1hNWU5YzFiNTRmZDIiLCJ1c2VybmFtZSI6ImFkbWluIn0.wm5XON2CYwKAiCs2V5HjrZNRDwPMBSFINUP2MPSw8qo"
